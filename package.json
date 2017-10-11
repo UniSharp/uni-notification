@@ -3,7 +3,9 @@
   "version": "0.0.2",
   "description": "Vue Bootstrap Nofifications",
   "main": "./src/index.js",
-  "dependencies": {},
+  "dependencies": {
+    "bootstrap": "v4.0.0-beta"
+  },
   "devDependencies": {},
   "scripts": {
     "dev": "webpack-dev-server --inline --hot --quiet --config build/webpack.dev.config.js",
