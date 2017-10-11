@@ -1,34 +1,34 @@
 $margin: 1.5rem;
 
 .notifications {
-    position: fixed;
-    top: 2.5rem;
-    right: 0;
-    margin: $margin;
-    z-index: 20;
+  position: fixed;
+  top: 2.5rem;
+  right: 0;
+  margin: $margin;
+  z-index: 20;
 }
 
 @include media-breakpoint-up(sm) {
-    .notifications {
-        width: 25%;
-        min-width: 20rem;
-    }
+  .notifications {
+    width: 25%;
+    min-width: 20rem;
+  }
 }
 
 @include media-breakpoint-down(sm) {
-    .notifications {
-        width: calc(100% - #{$margin} * 2);
-    }
+  .notifications {
+    width: calc(100% - #{$margin} * 2);
+  }
 }
 
 .notification {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 .list-enter-active, .list-leave-active {
-    transition: opacity .5s
+  transition: opacity .5s
 }
 
 .list-enter, .list-leave-active {
-    opacity: 0;
+  opacity: 0;
 }
