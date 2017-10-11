@@ -32,37 +32,6 @@
 	}
 </script>
 
-<style>
-	.notifications {
-		position: fixed;
-		top: 30px;
-		right: 0;
-		margin: 30px;
-		z-index: 20;
-	}
-
-	@media screen and (max-width: 768px) {
-		.notifications {
-			width: calc(100% - 60px);
-		}
-	}
-
-	@media screen and (min-width: 768px) {
-		.notifications {
-			width: 25%;
-			min-width: 220px;
-		}
-	}
-
-	.notification {
-		margin-bottom: 10px;
-	}
-
-	.list-enter-active, .list-leave-active {
-		transition: opacity .5s
-	}
-
-	.list-enter, .list-leave-active {
-		opacity: 0;
-	}
+<style lang="scss">
+	@import "../assets/style.scss"
 </style>
