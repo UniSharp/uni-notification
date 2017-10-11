@@ -33,25 +33,29 @@
 </script>
 
 <style>
-	.notifications{
+	.notifications {
 		position: fixed;
-		right: 30px;
 		top: 30px;
-		width: 25%;
-		min-width: 240px;
-		max-width: 480px;
+		right: 0;
+		margin: 30px;
+		z-index: 20;
 	}
 
-	.alert-primary{ background-color: #2c3e50 }
-	.alert-default{ background-color: #95a5a6 }
-	.alert-success{ background-color: #18bc9c }
-	.alert-info{ background-color: #3498db }
-	.alert-warning{ background-color: #f39c12 }
-	.alert-danger{ background-color: #e74c3c }
+	@media screen and (max-width: 768px) {
+		.notifications {
+			width: calc(100% - 60px);
+		}
+	}
 
-	.notification{
+	@media screen and (min-width: 768px) {
+		.notifications {
+			width: 25%;
+			min-width: 220px;
+		}
+	}
+
+	.notification {
 		margin-bottom: 10px;
-		color: #fff;
 	}
 
 	.list-enter-active, .list-leave-active {
