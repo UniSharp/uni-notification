@@ -1,6 +1,6 @@
 {
-  "name": "vue-bs-notify",
-  "version": "0.0.2",
+  "name": "uni-notification",
+  "version": "0.0.1",
   "description": "Vue Bootstrap Nofifications",
   "main": "./src/index.js",
   "dependencies": {
@@ -17,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/imade-nl/vue-bs-notify.git"
+    "url": "git+https://github.com/unisharp/uni-notification.git"
   },
   "keywords": [
     "Vue",
@@ -27,10 +27,10 @@
     "Toast",
     "Toaster"
   ],
-  "author": "“Pieter” <“pieter.imade@gmail.com”>",
+  "author": "UniSharp <team0@unisharp.com”>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/imade-nl/vue-bs-notify/issues"
+    "url": "https://github.com/unisharp/uni-notification/issues"
   },
-  "homepage": "https://github.com/imade-nl/vue-bs-notify#readme"
+  "homepage": "https://github.com/unisharp/uni-notification#readme"
 }
