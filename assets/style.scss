@@ -8,16 +8,16 @@ $margin: 1.5rem;
     z-index: 20;
 }
 
-@media screen and (max-width: 768px) {
-    .notifications {
-        width: calc(100% - #{$margin} * 2);
-    }
-}
-
-@media screen and (min-width: 768px) {
+@include media-breakpoint-up(sm) {
     .notifications {
         width: 25%;
         min-width: 20rem;
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .notifications {
+        width: calc(100% - #{$margin} * 2);
     }
 }
 
