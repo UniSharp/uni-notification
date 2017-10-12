@@ -1,9 +1,7 @@
-<template>
-  <div class="notifications">
-    <transition-group name="list" tag="div">
-      <notification v-for="item in items" :item="item" :key="item" @close="removeItem">{{ item }}</notification>
-    </transition-group>
-  </div>
+<template lang="pug">
+  .notifications
+    transition-group(name="list", tag="div")
+      notification(v-for="(item, index) in items", :item="item", :key="index", @close="removeItem") {{ item }}
 </template>
 
 <script>

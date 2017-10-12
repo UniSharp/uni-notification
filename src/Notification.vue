@@ -1,8 +1,8 @@
-<template>
-  <div class="notification alert alert-dismissible" :class="'alert-' + item.type">
-    <button type="button" class="close" @click="close"><span>&times;</span></button>
-    {{ item.message }}
-  </div>
+<template lang="pug">
+  .notification.alert.alert-dismissible(:class="'alert-' + item.type")
+    button.close(type="button", @click="close")
+      span &times;
+    | {{ item.message }}
 </template>
 
 <script>
