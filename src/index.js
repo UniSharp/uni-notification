@@ -1,59 +1,56 @@
 import Notifications from './Notifications.vue';
 
-const Notify = {
+function install(Vue) {
+  Vue.component('notifications', Notifications)
 
-  items: [],
-
-  options: {
+  var items = [];
+  const defaultOptions = {
     duration: 5000
-  },
+  };
 
-  showItem(item) {
-    this.items.push({
+  function showItem(item) {
+    items.push({
       type: item.type,
       message: item.message,
-      duration: this.options.duration
+      duration: item.duration || defaultOptions.duration
     });
-  },
+  }
 
-  install(Vue, options) {
+  Vue.prototype.$notify = {
+    show: (item) => {
+      showItem(item)
+    },
 
-    Vue.component('notifications', Notifications)
+    success: (message) => {
+      showItem({ type: 'success', message: message });
+    },
 
-    Vue.prototype.$notify = {
-      show: (item) => {
-        this.showItem(item)
-      },
+    danger: (message) => {
+      showItem({ type: 'danger', message: message });
+    },
 
-      success: (message) => {
-        this.showItem({ type: 'success', message: message });
-      },
+    warning: (message) => {
+      showItem({ type: 'warning', message: message });
+    },
 
-      danger: (message) => {
-        this.showItem({ type: 'danger', message: message });
-      },
+    info: (message) => {
+      showItem({ type: 'info', message: message });
+    },
 
-      warning: (message) => {
-        this.showItem({ type: 'warning', message: message });
-      },
+    primary: (message) => {
+      showItem({ type: 'primary', message: message });
+    },
 
-      info: (message) => {
-        this.showItem({ type: 'info', message: message });
-      },
+    default: (message) => {
+      showItem({ type: 'default', message: message });
+    },
 
-      primary: (message) => {
-        this.showItem({ type: 'primary', message: message });
-      },
-
-      default: (message) => {
-        this.showItem({ type: 'default', message: message });
-      },
-
-      getItems: () => {
-        return this.items
-      }
+    getItems: () => {
+      return items
     }
   }
-};
 
-export default Notify;
+  return Vue.prototype.$notify;
+}
+
+export default install;
