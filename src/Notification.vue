@@ -1,6 +1,6 @@
 <template>
   <div class="notification alert alert-dismissible" :class="'alert-' + item.type">
-    <button type="button" class="close"  @click="close"><span>&times;</span></button>
+    <button type="button" class="close" @click="close"><span>&times;</span></button>
     {{ item.message }}
   </div>
 </template>
