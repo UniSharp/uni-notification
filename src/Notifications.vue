@@ -1,7 +1,7 @@
 <template lang="pug">
   .notifications
     transition-group(name="list", tag="div")
-      notification(v-for="(item, index) in items", v-if="item.show", :item="item", :key="index", @close="removeItem(item)") {{ item }}
+      notification(v-for="(item, index) in items", v-if="item.display", :item="item", :key="index", @close="removeItem(item)") {{ item }}
 </template>
 
 <script>
