@@ -1,7 +1,7 @@
 <template lang="pug">
   .notifications
     transition-group(name="list", tag="div")
-      notification(v-for="(item, index) in items", :item="item", :key="index", @close="removeItem") {{ item }}
+      notification(v-for="(item, index) in items", v-if="item.show", :item="item", :key="index", @close="removeItem(item)") {{ item }}
 </template>
 
 <script>
@@ -18,10 +18,7 @@
     },
     methods: {
       removeItem(item) {
-        let key = this.items.indexOf(item)
-        if (key >= 0) {
-          this.items.splice(key, 1)
-        }
+        item.display = false
       }
     },
     created() {

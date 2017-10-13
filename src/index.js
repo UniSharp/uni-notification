@@ -12,7 +12,8 @@ function install(Vue) {
     items.push({
       type: item.type,
       message: item.message,
-      duration: item.duration || defaultOptions.duration
+      duration: item.duration || defaultOptions.duration,
+      display: true
     });
   }
 

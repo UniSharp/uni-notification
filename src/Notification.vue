@@ -21,9 +21,9 @@
       }
     },
     methods: {
-      close (item) {
+      close () {
         clearTimeout(this.timeout)
-        this.$emit('close', this.item)
+        this.$emit('close')
         this.$destroy()
       }
     }
