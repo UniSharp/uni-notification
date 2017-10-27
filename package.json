@@ -1,6 +1,6 @@
 {
-  "name": "uni-notification",
-  "version": "0.0.4",
+  "name": "@unisharp/vue-component-notificationprivate",
+  "version": "0.0.5",
   "description": "Vue Bootstrap Nofifications",
   "main": "./src/index.js",
   "dependencies": {
@@ -17,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/unisharp/uni-notification.git"
+    "url": "git+https://github.com/unisharp/unisharp-vue-component-notification.git"
   },
   "keywords": [
     "Vue",
@@ -30,7 +30,7 @@
   "author": "UniSharp <team0@unisharp.com”>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/unisharp/uni-notification/issues"
+    "url": "https://github.com/unisharp/unisharp-vue-component-notification/issues"
   },
-  "homepage": "https://github.com/unisharp/uni-notification#readme"
+  "homepage": "https://github.com/unisharp/unisharp-vue-component-notification#readme"
 }
