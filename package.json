@@ -1,5 +1,5 @@
 {
-  "name": "@unisharp/vue-component-notificationprivate",
+  "name": "@unisharp/vue-component-notification",
   "version": "0.0.5",
   "description": "Vue Bootstrap Nofifications",
   "main": "./src/index.js",
