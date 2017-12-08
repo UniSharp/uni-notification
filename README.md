@@ -1,23 +1,53 @@
 # vue-bs-notify
 
-[![npm](https://img.shields.io/npm/v/vue-bs-notify.svg)](https://www.npmjs.com/package/vue-bs-notify)
-[![npm](https://img.shields.io/npm/dt/vue-bs-notify.svg)](https://www.npmjs.com/package/vue-bs-notify)
+[![npm](https://img.shields.io/npm/v/@unisharp/vue-component-notification.svg)](https://www.npmjs.com/package/@unisharp/vue-component-notification)
+[![npm](https://img.shields.io/npm/dt/@unisharp/vue-component-notification.svg)](https://www.npmjs.com/package/@unisharp/vue-component-notification)
 [![vue2](https://img.shields.io/badge/vue-2.x-brightgreen.svg)](https://vuejs.org/)
 
 Vue Bootstrap Notifications
 
 ### Installation
 ```bash
-$ npm install vue-bs-notify --save
+$ yarn add @unisharp/vue-component-notification
 ```
 
-### Setup
+### Nuxt Setup
+
+`plugins/notification.js`
 
 ```javascript
-import Notifications from 'vue-bs-notify'
+import Vue from 'vue'
+import Notifications from '@unisharp/vue-component-notification'
+
 Vue.use(Notifications)
+
+export default ({ store }, inject) => {
+  // Inject `notify` key
+  // -> `app.$notify`
+  // -> `this.$notify` in Vue components
+  // -> `this.$notify` in store actions/mutations
+  // This way we can use it in middleware and pages `asyncData` & `fetch`
+  inject('notify', new Notifications(Vue))
+}
 ```
 
+`nuxt.config.js`
+
+```javascript
+...
+plugins: ['~/plugins/notification'],
+...
+```
+
+`layouts/default.vue`
+
+```javascript
+<template lang="pug">
+  div
+    notifications
+    nuxt
+</template>
+```
 ### Usage
 
 The show method accetps an object.
