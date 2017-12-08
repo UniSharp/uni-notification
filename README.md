@@ -1,4 +1,4 @@
-# vue-bs-notify
+# Notification component for vue/nuxt projects
 
 [![npm](https://img.shields.io/npm/v/@unisharp/vue-component-notification.svg)](https://www.npmjs.com/package/@unisharp/vue-component-notification)
 [![npm](https://img.shields.io/npm/dt/@unisharp/vue-component-notification.svg)](https://www.npmjs.com/package/@unisharp/vue-component-notification)
