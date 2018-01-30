@@ -27,7 +27,11 @@
     "Toast",
     "Toaster"
   ],
-  "author": "UniSharp <team0@unisharp.com”>",
+  "author": {
+    "name": "UniShar Ltd.",
+    "email": "opensource@unisharp.com",
+    "url": "https://www.unisharp.com"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/unisharp/unisharp-vue-component-notification/issues"
