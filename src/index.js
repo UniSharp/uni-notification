@@ -18,35 +18,35 @@ function install(Vue) {
   }
 
   Vue.prototype.$notify = {
-    show: (item) => {
+    show: function (item) {
       showItem(item)
     },
 
-    success: (message) => {
+    success: function (message) {
       showItem({ type: 'success', message: message });
     },
 
-    danger: (message) => {
+    danger: function (message) {
       showItem({ type: 'danger', message: message });
     },
 
-    warning: (message) => {
+    warning: function (message) {
       showItem({ type: 'warning', message: message });
     },
 
-    info: (message) => {
+    info: function (message) {
       showItem({ type: 'info', message: message });
     },
 
-    primary: (message) => {
+    primary: function (message) {
       showItem({ type: 'primary', message: message });
     },
 
-    default: (message) => {
+    default: function (message) {
       showItem({ type: 'default', message: message });
     },
 
-    getItems: () => {
+    getItems: function () {
       return items
     }
   }
