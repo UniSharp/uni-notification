@@ -1,5 +1,5 @@
 <template lang="pug">
-  .notifications
+  .notifications(v-if="hasShowingNotifications")
     transition-group(name="list", tag="div")
       notification(v-for="(item, index) in items", v-if="item.display", :item="item", :key="index", @close="removeItem(item)") {{ item }}
 </template>
@@ -23,23 +23,11 @@
     },
     created() {
       this.items = this.$notify.getItems();
+    },
+    computed: {
+      hasShowingNotifications () {
+        return !! this.items.filter(item => item.display).length
+      }
     }
   }
 </script>
-
-<style scoped>
-  .notifications {
-    position: fixed;
-    top: 0;
-    right: 0;
-    padding: 2rem 2rem 0 2rem;
-    z-index: 999;
-    width: 16rem;
-  }
-
-  @media screen and (max-width: 575px) {
-    .notifications {
-      width: 100%;
-    }
-  }
-</style>
